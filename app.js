@@ -8,10 +8,11 @@ const posts = [{
    "added_date": "1581461442206"
    }]
 
+app.get("/", (req,res)=>{
+   res.status(200).send("Hello World!!");
+   });
 
-}]
-
-app.get("/", (req,res)=> {
+app.get("/api/posts", (req,res)=> {
    res.status(200).send(posts);
 });
 
