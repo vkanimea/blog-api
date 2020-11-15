@@ -9,9 +9,13 @@ app.get("/", (req,res)=>{
    });
 
 app.get("/api/posts", (req,res)=> {
+   /* test a post to the /data.json file 
+   const test = {
+       testing:"testing"
+   }
+   postsData.add(test);
 
-
-
+   */
    res.status(200).send(postsData.get());
 });
 

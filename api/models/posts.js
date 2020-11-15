@@ -13,9 +13,9 @@ class Post {
 
    add(newPost) {
       /** Add new Post */
-      const current = this.readData();
-      currentPosts.unshift(newPost);
-      this.storeData(currentPosts);
+      const currentPosts = this.readData();
+      currentPosts.unshift(newPost); /* Shifts the new post to top   */
+      this.storeData(currentPosts);  
 
    }
 
