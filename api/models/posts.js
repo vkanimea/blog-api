@@ -11,8 +11,11 @@ class Post {
        /** Get One Blog Post */
    }
 
-   add() {
+   add(newPost) {
       /** Add new Post */
+      const current = this.readData();
+      currentPosts.unshift(newPost);
+      this.storeData(currentPosts);
 
    }
 
@@ -20,6 +23,12 @@ class Post {
       let rawdata = fs.readFileSync(PATH);
       let posts =  JSON.parse(rawdata);
       return posts;
+   }
+
+   storeData(rawData) {
+      let data = JSON.stringify(rawData);
+      fs.writeFileSync(PATH, data);
+
    }
 
 }

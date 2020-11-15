@@ -9,6 +9,9 @@ app.get("/", (req,res)=>{
    });
 
 app.get("/api/posts", (req,res)=> {
+
+
+
    res.status(200).send(postsData.get());
 });
 
