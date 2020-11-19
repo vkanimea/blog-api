@@ -8,6 +8,11 @@ app.get("/", (req,res)=>{
    res.status(200).send("Hello World!!");
    });
 
+app.use((req, res, next)=> {
+   res.setHeader("Access-Control-Allow-Origin", "*");
+   next();
+})
+
 app.get("/api/posts", (req,res)=> {
    /* test a post to the /data.json file 
    const test = {
