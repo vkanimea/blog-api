@@ -8,12 +8,12 @@ app.get("/", (req,res)=>{
    res.status(200).send("Hello World!!");
    });
 */
-app.use((req, res, next)=> {
+app.use((req, res, next)=> {  
    res.setHeader("Access-Control-Allow-Origin", "*");
    next();
 });
 
-app.use('/uploads', express.static('/uploads'));
+app.use('/uploads', express.static('uploads'));
 
 app.get("/api/posts", (req,res)=> {
    /* test a post to the /data.json file 
